@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    <div class="dashboard py-4">
+        <h4>Welcome to Your Dashboard!</h4>
+        <h5>Hey, {{ username }}!</h5>
+
+        <div class="row mb-3 shadow-sm p-3 bg-white rounded">
+            <div class="col-md-12">
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <a href="{% url 'profile' %}" class="btn btn-primary btn-block">Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form method="post" action="{% url 'password_change' %}" class="mb-3">
+            {% csrf_token %}
+            <button class="button btn btn-danger" type="submit">Change Password</button>
+        </form>
+
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button class="button btn btn-secondary" type="submit">Logout</button>
+        </form>
+    </div>
+{% endblock %}

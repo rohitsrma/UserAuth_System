@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+    <div class="profile py-4">
+        <h3 class="mb-4">Hey, it's your profile</h3>
+
+        <div class="row mb-3 shadow-sm p-3 bg-white rounded">
+            <div class="col-md-3">
+                <strong>Username:</strong>
+            </div>
+            <div class="col-md-9">
+                {{ username }}
+            </div>
+        </div>
+        <div class="row mb-3 shadow-sm p-3 bg-white rounded">
+            <div class="col-md-3">
+                <strong>Email:</strong>
+            </div>
+            <div class="col-md-9">
+                {{ email }}
+            </div>
+        </div>
+        <div class="row mb-3 shadow-sm p-3 bg-white rounded">
+            <div class="col-md-3">
+                <strong>Date Joined:</strong>
+            </div>
+            <div class="col-md-9">
+                {{ date|date:"D, d M Y" }}
+            </div>
+        </div>
+        <div class="row mb-3 shadow-sm p-3 bg-white rounded">
+            <div class="col-md-3">
+                <strong>Last Updated:</strong>
+            </div>
+            <div class="col-md-9">
+                {{ last_updated|date:"D, d M Y" }}
+            </div>
+        </div>
+
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button class="button btn btn-primary" type="submit">Logout</button>
+        </form>
+    </div>
+{% endblock %}
