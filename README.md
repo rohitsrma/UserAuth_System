@@ -7,31 +7,39 @@ This project is a user authentication system designed to manage user accounts se
 To run the project locally, follow these steps:
 
 1. Create a Virtual Environment (Optional):
+   
    ```bash
    python -m venv venv
    
-2. Activate Virtual Environment:
+3. Activate Virtual Environment:
+   
    - On Windows:
+     
      ```bash
      venv\Scripts\activate
 
    - On Mac:
+     
      ```bash
      source venv/bin/activate
 
-3. Clone the repository:
+4. Clone the repository:
+   
    ```bash
    git clone https://github.com/your-username/UserAuth_System.git
 
-4. Navigate to the Project Directory:
+5. Navigate to the Project Directory:
+   
    ```bash
    cd auth
 
-5. Install Dependencies:
+6. Install Dependencies:
+   
    ```bash
    pip install -r requirements.txt
 
-6. Run development server:
+7. Run development server:
+   
    ```bash
    python manage.py runserver
 
