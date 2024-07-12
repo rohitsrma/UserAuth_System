@@ -131,6 +131,9 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+"""This setting configures Django to use the console email backend. 
+When an email is sent, it will be output to the console rather than actually being sent."""
+
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 LOGIN_URL = '/login/'
